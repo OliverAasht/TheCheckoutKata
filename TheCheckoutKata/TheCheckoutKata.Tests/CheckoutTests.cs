@@ -25,5 +25,22 @@ namespace TheCheckoutKata.Tests
             // Assert
             Assert.Equal(175, result);
         }
+
+        [Fact]
+        public void GetTotalPriceThrowsPricingRuleNotFoundException()
+        {
+            // Arrange
+            var pricingRules = new PricingRules();
+            pricingRules.AddRule(new PricingRule("C", 20));
+            pricingRules.AddRule(new PricingRule("D", 15));
+
+            var checkout = new Checkout(pricingRules);
+            checkout.Scan("C");
+            checkout.Scan("D");
+            checkout.Scan("E");
+
+            // Act & Assert
+            Assert.Throws<PricingRuleNotFoundException>(() => checkout.GetTotalPrice());
+        }
     }
 }
