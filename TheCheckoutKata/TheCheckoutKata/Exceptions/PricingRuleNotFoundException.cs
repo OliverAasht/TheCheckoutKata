@@ -1,4 +1,4 @@
-﻿namespace TheCheckoutKata
+﻿namespace TheCheckoutKata.Exceptions
 {
     public class PricingRuleNotFoundException : Exception
     {

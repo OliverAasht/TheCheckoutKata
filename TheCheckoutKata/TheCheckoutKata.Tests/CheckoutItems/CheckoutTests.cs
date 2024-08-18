@@ -1,4 +1,8 @@
-namespace TheCheckoutKata.Tests
+using TheCheckoutKata.CheckoutItems;
+using TheCheckoutKata.Exceptions;
+using TheCheckoutKata.Pricing;
+
+namespace TheCheckoutKata.Tests.CheckoutItems
 {
     public class CheckoutTests
     {

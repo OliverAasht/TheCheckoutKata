@@ -1,4 +1,4 @@
-﻿namespace TheCheckoutKata
+﻿namespace TheCheckoutKata.Pricing
 {
     public class PricingRules
     {
