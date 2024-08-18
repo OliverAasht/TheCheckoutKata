@@ -3,7 +3,7 @@ namespace TheCheckoutKata.Tests
     public class CheckoutTests
     {
         [Fact]
-        public void Test1()
+        public void GetTotalPriceReturnsExpectedValue()
         {
             // Arrange
             var pricingRules = new PricingRules();
