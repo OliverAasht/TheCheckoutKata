@@ -9,9 +9,9 @@
             rules.Add(rule);
         }
 
-        public PricingRule GetRule(string sku)
+        public PricingRule? GetRule(string sku)
         {
-            return rules.First(x => x.SKU == sku);
+            return rules.FirstOrDefault(x => x.SKU == sku);
         }
     }
 }
