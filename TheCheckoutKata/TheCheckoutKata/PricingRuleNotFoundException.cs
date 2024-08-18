@@ -6,13 +6,13 @@
         {
         }
 
-        public PricingRuleNotFoundException(string message)
-            : base(message)
+        public PricingRuleNotFoundException(string sku)
+            : base($"Pricing rule not found for SKU: {sku}")
         {
         }
 
-        public PricingRuleNotFoundException(string message, Exception inner)
-            : base(message, inner)
+        public PricingRuleNotFoundException(string sku, Exception inner)
+            : base($"Pricing rule not found for SKU: {sku}", inner)
         {
         }
     }

@@ -39,8 +39,11 @@ namespace TheCheckoutKata.Tests
             checkout.Scan("D");
             checkout.Scan("E");
 
-            // Act & Assert
-            Assert.Throws<PricingRuleNotFoundException>(() => checkout.GetTotalPrice());
+            // Act
+            var result = Assert.Throws<PricingRuleNotFoundException>(() => checkout.GetTotalPrice());
+
+            // Assert
+            result.Message.Equals("Pricing rule not found for SKU: E");
         }
     }
 }

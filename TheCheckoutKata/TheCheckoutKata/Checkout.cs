@@ -12,9 +12,7 @@
             {
                 var rule = pricingRules.GetRule(item.Key);
                 if (rule == null)
-                {
-                    throw new PricingRuleNotFoundException($"Pricing rule not found for SKU: {item.Key}");
-                }
+                    throw new PricingRuleNotFoundException(item.Key);
 
                 if (rule.SpecialQuantity.HasValue && item.Value >= rule.SpecialQuantity.Value)
                 {
